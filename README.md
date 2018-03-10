@@ -5,7 +5,7 @@ With the L train set to shut down in 2019 for repairs, solutions have to be crea
 
 The [L Train Challenge](https://www.eventbrite.com/e/the-open-data-l-train-innovation-challenge-powered-by-nyc-open-data-tickets-42943870272) was a day-long hackathon organized by Forum for the Future, Dell, NYC Open Data, Collectively, and hosted at Grand Central Tech in New York City.
 
-## Shutdown's impact on communities
+## Impact of L Train Shutdown on Communities
 
 One of the major concerns of the L train shutdown is the impact on local businesses and real estate.
 Even global corporations headquartered in the city may be affected, with many workers relying on
