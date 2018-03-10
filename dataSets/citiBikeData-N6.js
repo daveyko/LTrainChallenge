@@ -1,4 +1,4 @@
-[
+module.exports = [
     {
         source: 'citi-N6',
         target: 'bedford',

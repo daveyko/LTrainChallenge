@@ -1,4 +1,4 @@
-[
+module.exports = [
     {
         source: 'citi-Roebling',
         target: 'bedford',

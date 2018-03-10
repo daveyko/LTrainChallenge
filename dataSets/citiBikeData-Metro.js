@@ -1,4 +1,4 @@
-[
+module.exports = [
     {
         source: 'citi-Metro',
         target: 'bedford',
