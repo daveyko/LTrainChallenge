@@ -1477,7 +1477,11 @@ const transport = [{
 ];
 
 const transportCoords = {
-  'citi-N6': [160, 0],
-  subway: [200, 200],
-  'citi-N8': [300, 300]
+  'citi-N6': [340, 0],
+  subway: [-340, 0],
+  'citi-N8': [0, -340],
+  'citi-berry': [0, 340],
+  'citi-Metro': [-250, -250],
+  'citi-Roebling': [250, -250],
+  bedford: [0, 0]
 };

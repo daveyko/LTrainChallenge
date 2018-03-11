@@ -174,50 +174,55 @@ repeat();
 //Continuously moves the circles outward and inward
 function repeat() {
 
-  const dur = 1000,
-    del = 500;
-
-  //Interpolate the fuzzyness
-  d3.selectAll('.blurValues')
-    .transition().duration(dur * 0.1)
-    .delay(function (d, i) {
-      return i * del;
-    })
-    .attrTween('stdDeviation', function () {
-      return d3.interpolateString('0 0', '9 0');
-    })
-    .transition().duration(dur * 0.2)
-    .attrTween('stdDeviation', function () {
-      return d3.interpolateString('9 0', '0 0');
-    })
-    .transition().duration(dur * 0.4) //Another one for the circles moving back in
-    .delay(function (d, i) {
-      return steps * del + i * del;
-    })
-    .attrTween('stdDeviation', function () {
-      return d3.interpolateString('0 0', '9 0');
-    })
-    .transition().duration(dur * 0.3)
-    .attrTween('stdDeviation', function () {
-      return d3.interpolateString('9 0', '0 0');
-    });
-
   //Move circles in an out
-  d3.selectAll('.flyCircle')
-    .transition('flyOut').duration(dur)
-    .delay(function (d, i) {
-      return d.id * del;
-    })
-    .ease('quad')
-    .attr('cx', height / 2 * 0.8)
-    // .attr("cx", function(d){return transportCoords[d[target]][0]})
-    .transition('flyIn').duration(dur / 3)
-    .delay(function (d, i) {
-      return steps * del + d.id * del;
-    })
-    .ease('sin')
-    .attr('cx', 0)
-    .call(endall, repeat);
+  d3.selectAll('.bedfordStart')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
+
+  d3.selectAll('.citi8Start')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
+
+  d3.selectAll('.citi6Start')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
+
+  d3.selectAll('.citiBerry')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
+
+  d3.selectAll('.citiMetro')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
+
+  d3.selectAll('.citiRoebling')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
+
+  d3.selectAll('.subway')
+    .transition()
+    .ease('linear')
+    .duration(4000)
+    .attr('cx', function(d){return transportCoords[d.target][0];})
+    .attr('cy', function(d){return transportCoords[d.target][1];});
 
 } //repeat
 
