@@ -18,9 +18,15 @@ through the surrounding community? How might we accurately model the daily (or m
 
 ## Modeling Pedestrian Data
 
-To model pedestrian data, we decided to take a look at exisiting Open Data from the city of New York to understand clusters of pedestrians. 
+To model pedestrian data, we decided to take a look at exisiting open data from the city of New York to understand where clusters of pedestrians may be found and how they evolve over time. We used available data from citi bike pick up and drop off, MTA subway turnstyle, and taxi and For-Hire Vehicule pick up and drop offs.
+
+Using those data points, we created a D3 vizualization of pedestian flows and cluster over time, specifically around Bedford Avenue and Williamsburg. 
+
+With this vizualization, we can now also understand how transportation habits may change over time (before, during and after the L train shutdown) and see which locations become more or less popular areas.
 
 ### The Team
+
+This was a very much challenge and we are glad we were able to be part of it. 
 
 * [Jannine Chan](https://github.com/jn9cn)
 * [Doris Cheng](https://github.com/dorcheng)
