@@ -3,7 +3,7 @@
 Roughly 400,000 people ride the L-train with 225,000 of them riding between Brooklyn and Manhattan daily.
 With the L train set to shut down in 2019 for repairs, solutions have to be created to accomodate daily commuters.
 
-The [L Train Challenge](https://www.eventbrite.com/e/the-open-data-l-train-innovation-challenge-powered-by-nyc-open-data-tickets-42943870272) was a day-long hackathon organized by Forum for the Future, Dell, NYC Open Data, Collectively, and hosted at Grand Central Tech in New York City.
+The L Train Challenge was a [day-long hackathon](https://www.metro.us/news/local-news/new-york/tech-looks-local-l-train-shutdown-solutions) organized by Forum for the Future, Dell, NYC Open Data, Collectively, and hosted at Grand Central Tech in New York City.
 
 ## Impact of L Train Shutdown on Communities
 
@@ -26,10 +26,12 @@ With this vizualization, we can now also understand how transportation habits ma
 
 ### The Team
 
-This was a very much challenge and we are glad we were able to be part of it. 
+This was a very fun challenge and we are glad we were able to be part of it. 
 
 * [Jannine Chan](https://github.com/jn9cn)
 * [Doris Cheng](https://github.com/dorcheng)
 * [David Ko](https://github.com/daveyko)
 * [Elisabeth Seite](https://github.com/eseite47)
 * [Alex Zoitos](https://github.com/azoitos)
+
+![local tech gurus](https://www.metro.us/sites/default/files/styles/normal_article_breakpoints_theme_metrous_desktop_1x/public/main/articles/open_data_week_l_train_shutdown.jpg)
