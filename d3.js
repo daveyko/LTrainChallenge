@@ -17,6 +17,7 @@ const svg = d3.select('#movingCircles')
   .attr('transform', 'translate(' + (margin.left + width / 2) + ',' + (margin.top + height / 2) + ')');
 
 const color = 'lightgrey';
+let timeStamp = 8
 
 const defs = svg.append('defs');
 
@@ -24,6 +25,14 @@ const circleWrapper = svg.append('g')
   .attr('class', 'circleWrapper');
 
 const transportGroup = circleWrapper.append('g');
+
+const getVolume = (source) => {
+  let hourlyData = trainData.filter(function (d) {
+    return d.source === source && d.time === timeStamp;
+  })
+  console.log('volume', hourlyData[0].volume)
+  return hourlyData[0].volume
+}
 
 const transportModes = transportGroup.selectAll('transportModes')
   .data(transport)
@@ -54,9 +63,7 @@ const transportNames = transportGroup.selectAll('.transportText')
   });
 
 const befordStart = circleWrapper.selectAll('.bedfordStart')
-  .data(trainData.filter(function (d) {
-    return d.source === 'bedford';
-  }))
+  .data(getVolume('bedford'))
   .enter()
   .append('circle')
   .attr('class', 'bedfordStart')
@@ -69,10 +76,10 @@ const befordStart = circleWrapper.selectAll('.bedfordStart')
   .attr('r', 5)
   .style('fill', color);
 
+
+
 const subwayStart = circleWrapper.selectAll('.subwayStart')
-  .data(trainData.filter(function (d) {
-    return d.source === 'subway';
-  }))
+  .data(getVolume('subway'))
   .enter()
   .append('circle')
   .attr('class', 'subwayStart')
@@ -84,11 +91,10 @@ const subwayStart = circleWrapper.selectAll('.subwayStart')
   })
   .attr('r', 5)
   .style('fill', 'grey');
+  console.log('subway', subwayStart)
 
 const citi6Start = circleWrapper.selectAll('.citi6Start')
-  .data(trainData.filter(function (d) {
-    return d.source === 'citi-N6';
-  }))
+  .data(getVolume('citi-N6'))
   .enter()
   .append('circle')
   .attr('class', 'citiStart')
@@ -102,9 +108,7 @@ const citi6Start = circleWrapper.selectAll('.citi6Start')
   .style('fill', 'brown');
 
 const citi8Start = circleWrapper.selectAll('.citi8Start')
-  .data(trainData.filter(function (d) {
-    return d.source === 'citi-N8';
-  }))
+  .data(getVolume('citi-N8'))
   .enter()
   .append('circle')
   .attr('class', 'citi8Start')
@@ -118,9 +122,7 @@ const citi8Start = circleWrapper.selectAll('.citi8Start')
   .style('fill', 'tan');
 
 const citiBerry = circleWrapper.selectAll('.citiBerry')
-  .data(trainData.filter(function (d) {
-    return d.source === 'citi-berry';
-  }))
+  .data(getVolume('citi-berry'))
   .enter()
   .append('circle')
   .attr('class', 'citiBerry')
@@ -134,9 +136,7 @@ const citiBerry = circleWrapper.selectAll('.citiBerry')
   .style('fill', 'red');
 
 const citiMetro = circleWrapper.selectAll('.citiMetro')
-  .data(trainData.filter(function (d) {
-    return d.source === 'citi-Metro';
-  }))
+  .data(getVolume('citi-Metro'))
   .enter()
   .append('circle')
   .attr('class', 'citiMetro')
@@ -150,9 +150,7 @@ const citiMetro = circleWrapper.selectAll('.citiMetro')
   .style('fill', 'blue');
 
 const citiRoebling = circleWrapper.selectAll('.citiRoebling')
-  .data(trainData.filter(function (d) {
-    return d.source === 'citi-Roebling';
-  }))
+  .data(getVolume('citi-Roebling'))
   .enter()
   .append('circle')
   .attr('class', 'citiRoebling')
